@@ -65,10 +65,10 @@ const ImgCrop = forwardRef<Cropper, ImgCropProps>((props, ref) => {
         accept: accept || 'image/*',
         beforeUpload: (file, fileList) => {
           return new Promise(async (resolve, reject) => {
-            if (cb.current.beforeCrop && !(await cb.current.beforeCrop(file, fileList))) {
-              reject();
-              return;
-            }
+            // if (cb.current.beforeCrop && !(await cb.current.beforeCrop(file, fileList))) {
+            //   reject();
+            //   return;
+            // }
 
             fileRef.current = file;
             resolveRef.current = (newFile) => {
