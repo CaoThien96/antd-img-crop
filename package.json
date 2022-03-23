@@ -24,7 +24,8 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c"
+    "build": "rm -rf dist && rollup -c",
+    "postinstall": "yarn && yarn build"
   },
   "peerDependencies": {
     "antd": ">=4.0.0",
