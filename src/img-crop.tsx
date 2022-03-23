@@ -194,7 +194,7 @@ const ImgCrop = forwardRef<Cropper, ImgCropProps>((props, ref) => {
       }
 
       if (res === true) return resolveRef.current(newFile);
-      if (res === false) return rejectRef.current(new Error('not upload'));
+      if (res === false) return resolveRef.current(newFile);
       if (res && res instanceof Promise) {
         try {
           const passedFile = await res;
